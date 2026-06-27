@@ -1,0 +1,22 @@
+# Local Claude Code tooling
+.claude/
+
+# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+*.secret
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
