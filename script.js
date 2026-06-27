@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ----- WhatsApp floating widget -----
+  initWhatsApp();
+
   const form = document.getElementById("enquiry-form");
   if (!form) return;
 
@@ -126,3 +129,54 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+/* ===========================================================
+   WhatsApp floating widget — open/close panel, send a chosen
+   query (or a free chat) to the studio WhatsApp number.
+   =========================================================== */
+function initWhatsApp() {
+  const WA_NUMBER = "6596983731";
+  const widget = document.getElementById("wa-widget");
+  if (!widget) return;
+
+  const launcher = document.getElementById("wa-launcher");
+  const panel = document.getElementById("wa-panel");
+  const closeBtn = document.getElementById("wa-close");
+
+  const setOpen = (open) => {
+    widget.classList.toggle("is-open", open);
+    launcher.setAttribute("aria-expanded", String(open));
+    panel.setAttribute("aria-hidden", String(!open));
+  };
+
+  launcher.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setOpen(!widget.classList.contains("is-open"));
+  });
+  if (closeBtn) closeBtn.addEventListener("click", () => setOpen(false));
+
+  // Open WhatsApp with a prefilled message.
+  const sendTo = (message) => {
+    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener");
+    setOpen(false);
+  };
+
+  widget.querySelectorAll(".wa__chip").forEach((chip) => {
+    chip.addEventListener("click", () => sendTo(chip.dataset.msg || "Hi, I'd like to know more about Forge & Function."));
+  });
+
+  // The "Open WhatsApp chat" link carries a default greeting too.
+  const openLink = document.getElementById("wa-open");
+  if (openLink) {
+    openLink.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi Forge & Function, I'd like to chat about a project.")}`;
+  }
+
+  // Close on Escape or when clicking outside the widget.
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+  document.addEventListener("click", (e) => {
+    if (widget.classList.contains("is-open") && !widget.contains(e.target)) setOpen(false);
+  });
+}
