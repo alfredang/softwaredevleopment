@@ -1,5 +1,7 @@
 # Local Claude Code tooling
 .claude/
+.mcp.json
+.playwright-mcp/
 
 # Secrets / credentials
 .env
