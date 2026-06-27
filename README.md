@@ -4,6 +4,8 @@ A single-page marketing website for a fictional software development studio. Pur
 
 🔗 **Live site:** https://alfredang.github.io/softwaredevleopment/
 
+![Screenshot of the Forge & Function website](screenshot.png)
+
 ## Features
 
 - Responsive, mobile-first layout
