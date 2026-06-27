@@ -89,29 +89,40 @@ document.addEventListener("DOMContentLoaded", () => {
       phone:   form.phone.value.trim(),
       service: form.service.value,
       message: form.message.value.trim(),
+
+      // FormSubmit control fields (https://formsubmit.co):
+      _subject: "New enquiry from Forge & Function",
+      _template: "table",
+      _captcha: "false",     // skip FormSubmit's hCaptcha redirect for the AJAX flow
     };
 
-    // Placeholder for a real backend call — log to console for now.
-    console.log("Enquiry submitted:", formData);
+    // POST the enquiry to FormSubmit, which emails it to the studio inbox.
+    // First-ever submission triggers a one-time activation email to that
+    // address — click the link in it once and all later enquiries arrive.
+    const submitBtn = form.querySelector('button[type="submit"], button:not([type])');
+    if (submitBtn) submitBtn.disabled = true;
 
-    /*
-    // ----- Example: POST the enquiry to a real API endpoint -----
-    fetch("https://api.example.com/enquiries", {
+    fetch("https://formsubmit.co/ajax/angch@tertiaryinfotech.com", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(formData),
     })
       .then((res) => {
         if (!res.ok) throw new Error(`Request failed: ${res.status}`);
         return res.json();
       })
-      .then((data) => console.log("Saved:", data))
-      .catch((err) => console.error("Submission error:", err));
-    */
-
-    // Show confirmation and reset the form.
-    successEl.hidden = false;
-    form.reset();
-    successEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      .then(() => {
+        // Show confirmation and reset the form.
+        successEl.hidden = false;
+        form.reset();
+        successEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      })
+      .catch((err) => {
+        console.error("Submission error:", err);
+        setError("message", "Sorry — something went wrong sending your enquiry. Please email us directly at angch@tertiaryinfotech.com.");
+      })
+      .finally(() => {
+        if (submitBtn) submitBtn.disabled = false;
+      });
   });
 });
