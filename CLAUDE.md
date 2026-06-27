@@ -14,7 +14,7 @@ Open `index.html` directly in a browser. There is no dev server or build:
 Start-Process index.html   # Windows / PowerShell
 ```
 
-The only external dependency is Google Fonts (Bricolage Grotesque, JetBrains Mono, Hanken Grotesk) loaded via CDN in the `<head>` — typography needs an internet connection to render as designed; it falls back to system fonts offline.
+The only external dependency is Google Fonts (Archivo Expanded, Hanken Grotesk, JetBrains Mono) loaded via CDN in the `<head>` — typography needs an internet connection to render as designed; it falls back to system fonts offline.
 
 ## Architecture
 

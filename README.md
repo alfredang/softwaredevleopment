@@ -13,15 +13,19 @@ A single-page marketing website for a fictional software development studio. Pur
 - Four anchored sections: Hero, Services, Testimonials, and a Contact enquiry form
 - Client-side form validation (config-driven)
 - Respects `prefers-reduced-motion` for accessibility
-- Custom typography via Google Fonts (Bricolage Grotesque, JetBrains Mono, Hanken Grotesk)
+- "Datasheet" visual identity — drafting-paper layout, forge-orange + steel-blue accents, engineering annotations
+- Custom typography via Google Fonts (Archivo Expanded, Hanken Grotesk, JetBrains Mono)
 
 ## Project structure
 
 ```
 .
-├── index.html      # Semantic structure — one <main> with four sections
+├── index.html      # Semantic structure — one <main> with four sections; SEO meta + JSON-LD
 ├── styles.css      # All styling; design tokens live in :root CSS variables
 ├── script.js       # Behavior — enquiry form validation
+├── robots.txt      # Crawler directives + sitemap pointer
+├── sitemap.xml     # XML sitemap for search engines
+├── favicon.svg     # Site icon
 └── .github/
     └── workflows/
         └── deploy.yml   # GitHub Pages deployment via GitHub Actions

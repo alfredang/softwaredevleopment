@@ -1,5 +1,7 @@
 # Local Claude Code tooling
 .claude/
+.agents/
+skills-lock.json
 .mcp.json
 .playwright-mcp/
 

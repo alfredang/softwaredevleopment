@@ -3,163 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forge & Function — Custom Software Engineering</title>
-  <meta name="description" content="We build custom software that scales. Product engineering, platforms, and AI integration for teams that ship." />
+  <title>Forge &amp; Function — Custom Software Engineering</title>
+  <meta name="description" content="Senior engineering studio building custom software to spec — platforms, AI features, and cloud infrastructure for teams shipping under real load." />
+  <link rel="canonical" href="https://alfredang.github.io/softwaredevleopment/" />
+  <meta name="theme-color" content="#0b0b0c" />
 
-  <!-- Fonts: distinctive display + characterful mono + clean body -->
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Forge &amp; Function" />
+  <meta property="og:title" content="Forge &amp; Function — Custom Software Engineering" />
+  <meta property="og:description" content="Senior engineering studio building custom software to spec — platforms, AI features, and cloud infrastructure for teams shipping under real load." />
+  <meta property="og:url" content="https://alfredang.github.io/softwaredevleopment/" />
+  <meta property="og:image" content="https://alfredang.github.io/softwaredevleopment/screenshot.png" />
+  <meta property="og:image:alt" content="Forge &amp; Function — custom software engineering studio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Forge &amp; Function — Custom Software Engineering" />
+  <meta name="twitter:description" content="Senior engineering studio building custom software to spec — platforms, AI features, and cloud infrastructure for teams shipping under real load." />
+  <meta name="twitter:image" content="https://alfredang.github.io/softwaredevleopment/screenshot.png" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Type: Archivo Expanded (industrial display) · Hanken Grotesk (humanist body) · JetBrains Mono (data) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800;900&family=Archivo:wght@500;600&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
+
+  <!-- Structured data: studio as a professional service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Forge & Function",
+    "description": "Senior engineering studio building custom software to spec — platforms, AI features, and cloud infrastructure for teams shipping under real load.",
+    "url": "https://alfredang.github.io/softwaredevleopment/",
+    "image": "https://alfredang.github.io/softwaredevleopment/screenshot.png",
+    "foundingDate": "2017",
+    "knowsAbout": [
+      "Custom software development",
+      "AI integration",
+      "Cloud infrastructure",
+      "Product design"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom platforms", "description": "Web apps and back-end systems engineered for scale, audits, and concurrency." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI integration", "description": "LLM features, retrieval pipelines, and agents with guardrails, evaluation, and predictable costs." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud & infrastructure", "description": "CI/CD, infrastructure as code, and observability." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product & interface", "description": "Research, design systems, and interfaces for complex software." } }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ===== Navbar ===== -->
   <header class="nav" id="top">
     <div class="nav__inner">
       <a class="brand" href="#home" aria-label="Forge &amp; Function home">
-        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__mark" aria-hidden="true">
+          <span class="brand__mark-bar"></span>
+        </span>
         <span class="brand__name">Forge<span class="brand__amp">&amp;</span>Function</span>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#testimonials">Clients</a>
+        <a href="#services">Capabilities</a>
+        <a href="#testimonials">Field reports</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="btn btn--ghost nav__cta" href="#contact">Get a Quote</a>
+      <a class="btn btn--primary nav__cta" href="#contact">Request a quote</a>
     </div>
+    <span class="nav__rev mono" aria-hidden="true">REV&nbsp;2026.06 — EST. 2017</span>
   </header>
 
-  <main>
-    <!-- ===== Hero ===== -->
+  <main class="doc">
+    <!-- ===== Hero / datasheet header ===== -->
     <section class="hero" id="home">
-      <div class="hero__grid" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="margin" aria-hidden="true">
+        <span class="margin__code">F&amp;F&middot;0001</span>
+      </div>
 
-      <div class="hero__content">
+      <div class="hero__body">
         <p class="eyebrow reveal" style="--d:0ms">
-          <span class="eyebrow__dot"></span> Product engineering studio
+          <span class="eyebrow__sig"></span>
+          <span>Custom software engineering studio</span>
         </p>
 
-        <h1 class="hero__title reveal" style="--d:80ms">
-          We build software<br />
-          that <span class="hl">scales</span>.
+        <h1 class="hero__title">
+          <span class="reveal" style="--d:90ms">We build software</span>
+          <span class="reveal" style="--d:170ms">that holds under</span>
+          <span class="reveal hero__title-accent" style="--d:250ms">real load.</span>
         </h1>
 
-        <p class="hero__sub reveal" style="--d:160ms">
-          From first commit to global rollout — without the rewrite.
+        <!-- Signature: stats called out like dimensions on a technical drawing -->
+        <ul class="callouts reveal" style="--d:340ms" aria-label="Studio at a glance">
+          <li class="callout">
+            <span class="callout__lead" aria-hidden="true"></span>
+            <span class="callout__val">120+</span>
+            <span class="callout__key">products shipped to production</span>
+          </li>
+          <li class="callout">
+            <span class="callout__lead" aria-hidden="true"></span>
+            <span class="callout__val">9 yrs</span>
+            <span class="callout__key">median engineer experience</span>
+          </li>
+          <li class="callout">
+            <span class="callout__lead" aria-hidden="true"></span>
+            <span class="callout__val">99.9%</span>
+            <span class="callout__key">uptime delivered, last 12 mo.</span>
+          </li>
+        </ul>
+
+        <p class="hero__lead reveal" style="--d:420ms">
+          Forge &amp; Function is a small, senior team of engineers and designers.
+          We build the platforms, AI features, and infrastructure other teams
+          depend on — drawn to spec, built to last, and handed over clean.
         </p>
 
-        <p class="hero__lead reveal" style="--d:240ms">
-          Forge &amp; Function is a senior team of engineers and designers building
-          custom platforms, internal tools, and AI-driven products. We pair clean
-          architecture with relentless delivery, so your software grows with you
-          instead of holding you back.
-        </p>
-
-        <div class="hero__actions reveal" style="--d:320ms">
-          <a class="btn btn--primary" href="#contact">Get a Quote →</a>
-          <a class="btn btn--ghost" href="#services">See what we do</a>
+        <div class="hero__actions reveal" style="--d:500ms">
+          <a class="btn btn--primary" href="#contact">Request a quote</a>
+          <a class="btn btn--ghost" href="#services">View capabilities</a>
         </div>
 
-        <dl class="hero__stats reveal" style="--d:400ms">
-          <div><dt>120+</dt><dd>products shipped</dd></div>
-          <div><dt>9 yrs</dt><dd>avg. engineer experience</dd></div>
-          <div><dt>99.9%</dt><dd>uptime delivered</dd></div>
-        </dl>
+        <p class="hero__spec mono reveal" style="--d:580ms">
+          SPEC&nbsp;&middot;&nbsp; senior team &middot; clean architecture &middot; fixed scope or embedded &middot; ships weekly
+        </p>
       </div>
     </section>
 
-    <!-- ===== Services strip (anchor target for nav) ===== -->
-    <section class="services" id="services" aria-labelledby="services-title">
-      <h2 id="services-title" class="section-title">
-        <span class="section-title__index">01</span> What we do
-      </h2>
-      <div class="services__grid">
-        <article class="svc">
-          <span class="svc__num">/01</span>
-          <h3>Custom platforms</h3>
-          <p>Web apps and back-end systems engineered to handle scale, audits, and the load you haven't hit yet.</p>
-        </article>
-        <article class="svc">
-          <span class="svc__num">/02</span>
-          <h3>AI integration</h3>
-          <p>LLM features, RAG pipelines, and agents wired into your product with guardrails and real evaluation.</p>
-        </article>
-        <article class="svc">
-          <span class="svc__num">/03</span>
-          <h3>Cloud &amp; DevOps</h3>
-          <p>CI/CD, infrastructure-as-code, and observability so shipping on Friday stops being scary.</p>
-        </article>
-        <article class="svc">
-          <span class="svc__num">/04</span>
-          <h3>Product &amp; UX</h3>
-          <p>Research, design systems, and interfaces that make complex software feel obvious to use.</p>
-        </article>
+    <!-- ===== Capabilities (parts list) ===== -->
+    <section class="caps" id="services" aria-labelledby="services-title">
+      <header class="sec-head">
+        <span class="sec-head__tag mono">SHEET 01</span>
+        <h2 id="services-title" class="sec-head__title">Capabilities</h2>
+        <p class="sec-head__note">Four disciplines, one team. Engaged together or à la carte.</p>
+      </header>
+
+      <ol class="caps__list">
+        <li class="cap">
+          <span class="cap__code mono">F-01</span>
+          <div class="cap__main">
+            <h3 class="cap__title">Custom platforms</h3>
+            <p class="cap__desc">Web apps and back-end systems engineered for the scale, audits, and concurrency you haven't hit yet — not just the demo.</p>
+          </div>
+          <span class="cap__spec mono">Go · TypeScript · Postgres</span>
+        </li>
+        <li class="cap">
+          <span class="cap__code mono">F-02</span>
+          <div class="cap__main">
+            <h3 class="cap__title">AI integration</h3>
+            <p class="cap__desc">LLM features, retrieval pipelines, and agents wired into your product with guardrails, evaluation, and costs you can predict.</p>
+          </div>
+          <span class="cap__spec mono">RAG · agents · evals</span>
+        </li>
+        <li class="cap">
+          <span class="cap__code mono">F-03</span>
+          <div class="cap__main">
+            <h3 class="cap__title">Cloud &amp; infrastructure</h3>
+            <p class="cap__desc">CI/CD, infrastructure as code, and observability — so deploying on a Friday afternoon stops being a gamble.</p>
+          </div>
+          <span class="cap__spec mono">IaC · CI/CD · o11y</span>
+        </li>
+        <li class="cap">
+          <span class="cap__code mono">F-04</span>
+          <div class="cap__main">
+            <h3 class="cap__title">Product &amp; interface</h3>
+            <p class="cap__desc">Research, design systems, and interfaces that make complex software feel obvious — to your users and your own team.</p>
+          </div>
+          <span class="cap__spec mono">research · design systems</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Field reports (testimonials) ===== -->
+    <section class="reports" id="testimonials" aria-labelledby="testimonials-title">
+      <header class="sec-head">
+        <span class="sec-head__tag mono">SHEET 02</span>
+        <h2 id="testimonials-title" class="sec-head__title">Field reports</h2>
+        <p class="sec-head__note">Verified outcomes from the people who signed off on the work.</p>
+      </header>
+
+      <div class="reports__grid">
+        <figure class="report">
+          <span class="report__stamp mono" aria-hidden="true">VERIFIED</span>
+          <blockquote class="report__quote">They rebuilt our billing platform in four months. It now clears ten times the volume, and we haven't had to think about it since.</blockquote>
+          <figcaption class="report__by">
+            <span class="report__name">Maya Aronson</span>
+            <span class="report__role mono">CTO · Northwind Pay</span>
+          </figcaption>
+        </figure>
+
+        <figure class="report">
+          <span class="report__stamp mono" aria-hidden="true">VERIFIED</span>
+          <blockquote class="report__quote">The most senior team we've worked with. They questioned our assumptions first, then shipped faster than agencies twice their size.</blockquote>
+          <figcaption class="report__by">
+            <span class="report__name">Daniel Kessler</span>
+            <span class="report__role mono">VP Engineering · Lumen Health</span>
+          </figcaption>
+        </figure>
+
+        <figure class="report">
+          <span class="report__stamp mono" aria-hidden="true">VERIFIED</span>
+          <blockquote class="report__quote">They turned a fragile prototype into a product our enterprise customers actually trust. Worth every cent of the engagement.</blockquote>
+          <figcaption class="report__by">
+            <span class="report__name">Priya Raman</span>
+            <span class="report__role mono">Founder · Cartograph AI</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ===== Testimonials ===== -->
-    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
-      <h2 id="testimonials-title" class="section-title">
-        <span class="section-title__index">02</span> What our clients say
-      </h2>
-
-      <div class="testimonials__grid">
-        <article class="card">
-          <p class="card__quote">"They rebuilt our billing platform in four months. It now processes ten times the volume and we haven't thought about it since."</p>
-          <footer class="card__person">
-            <span class="avatar" aria-hidden="true" data-tone="a">MA</span>
-            <span class="card__meta">
-              <span class="card__name">Maya Aronson</span>
-              <span class="card__role">CTO, Northwind Pay</span>
-            </span>
-          </footer>
-        </article>
-
-        <article class="card">
-          <p class="card__quote">"The most senior team we've worked with. They questioned our assumptions, then shipped faster than agencies twice their size."</p>
-          <footer class="card__person">
-            <span class="avatar" aria-hidden="true" data-tone="b">DK</span>
-            <span class="card__meta">
-              <span class="card__name">Daniel Kessler</span>
-              <span class="card__role">VP Engineering, Lumen Health</span>
-            </span>
-          </footer>
-        </article>
-
-        <article class="card">
-          <p class="card__quote">"Forge &amp; Function turned a fragile prototype into a product our enterprise customers actually trust. Worth every cent."</p>
-          <footer class="card__person">
-            <span class="avatar" aria-hidden="true" data-tone="c">PR</span>
-            <span class="card__meta">
-              <span class="card__name">Priya Raman</span>
-              <span class="card__role">Founder, Cartograph AI</span>
-            </span>
-          </footer>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Enquiry form ===== -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact__inner">
-        <div class="contact__intro">
-          <h2 id="contact-title" class="section-title">
-            <span class="section-title__index">03</span> Get in touch
-          </h2>
-          <p class="contact__lead">
-            Tell us what you're building. We'll get back within one business day with
-            next steps and a ballpark — no sales theatre.
+    <!-- ===== Work order (enquiry form) ===== -->
+    <section class="order" id="contact" aria-labelledby="contact-title">
+      <div class="order__inner">
+        <div class="order__intro">
+          <span class="sec-head__tag mono">SHEET 03</span>
+          <h2 id="contact-title" class="sec-head__title">Start a work order</h2>
+          <p class="order__lead">
+            Tell us what you're building. You'll hear back within one business day
+            with next steps and a ballpark — no sales theatre.
           </p>
-          <ul class="contact__list">
-            <li><span class="mono">→</span> Fixed-scope or embedded teams</li>
-            <li><span class="mono">→</span> NDAs &amp; security reviews welcome</li>
-            <li><span class="mono">→</span> Typical kickoff in 1–2 weeks</li>
+          <ul class="order__list">
+            <li><span class="order__bullet mono">01</span> Fixed-scope projects or embedded engineers</li>
+            <li><span class="order__bullet mono">02</span> NDAs and security reviews are routine here</li>
+            <li><span class="order__bullet mono">03</span> Typical kickoff within one to two weeks</li>
           </ul>
         </div>
 
@@ -177,33 +248,33 @@
           </div>
 
           <div class="field">
-            <label for="phone">Phone <span class="opt">(optional)</span></label>
+            <label for="phone">Phone <span class="opt">optional</span></label>
             <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+1 555 000 1234" />
             <span class="error" id="error-phone" role="alert"></span>
           </div>
 
           <div class="field">
-            <label for="service">Service interested in</label>
+            <label for="service">What do you need built?</label>
             <select id="service" name="service">
               <option value="Custom platforms">Custom platforms</option>
               <option value="AI integration">AI integration</option>
-              <option value="Cloud &amp; DevOps">Cloud &amp; DevOps</option>
-              <option value="Product &amp; UX">Product &amp; UX</option>
+              <option value="Cloud &amp; infrastructure">Cloud &amp; infrastructure</option>
+              <option value="Product &amp; interface">Product &amp; interface</option>
               <option value="Not sure yet">Not sure yet</option>
             </select>
             <span class="error" id="error-service" role="alert"></span>
           </div>
 
           <div class="field">
-            <label for="message">Message <span class="req">*</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="A sentence or two about your project, timeline, and goals."></textarea>
+            <label for="message">Project brief <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="A sentence or two on the project, timeline, and what success looks like."></textarea>
             <span class="error" id="error-message" role="alert"></span>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--block">Send enquiry →</button>
+          <button type="submit" class="btn btn--primary btn--block">Send work order</button>
 
-          <p class="form__success" id="form-success" role="status" aria-live="polite" hidden>
-            Thanks! We'll be in touch shortly.
+          <p class="form__success mono" id="form-success" role="status" aria-live="polite" hidden>
+            Received. We'll be in touch within one business day.
           </p>
         </form>
       </div>
@@ -213,8 +284,8 @@
   <footer class="footer">
     <div class="footer__inner">
       <span class="brand__name">Forge<span class="brand__amp">&amp;</span>Function</span>
-      <p class="footer__copy">© <span id="year"></span> Forge &amp; Function. Engineered, not assembled.</p>
-      <a href="#top" class="footer__top">Back to top ↑</a>
+      <p class="footer__copy mono">© <span id="year"></span> Forge &amp; Function — engineered, not assembled.</p>
+      <a href="#top" class="footer__top mono">Back to top ↑</a>
     </div>
   </footer>
 </body>
